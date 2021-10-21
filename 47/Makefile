@@ -13,6 +13,23 @@ PROGNAME	= a.out
 BUILD_DIR	= ../build/47/
 
 SOURCE	= \
+main.cpp \
+symtab/symtab1.cpp \
+symtab/symtab2.cpp \
+symtab/findidx.cpp \
+symtab/binsearch.cpp \
+symtab/enlarge.cpp \
+symtab/moveelements.cpp \
+symbol/symbol1.cpp \
+symbol/symbol2.cpp \
+symbol/compare.cpp \
+value/value1.cpp \
+value/value2.cpp \
+value/value3.cpp \
+value/doublevalue.cpp \
+value/intvalue.cpp \
+value/charvalue.cpp \
+value/requirespecial.cpp
 
 OUT	= $(BUILD_DIR)$(PROGNAME)
 OBJS	= $(SOURCE:%.cpp=$(BUILD_DIR)%.o)
@@ -27,6 +44,8 @@ $(BUILD_DIR)%.o : %.cpp
 	$(CXX) $(CXXFLAGS) $< -o $@
 
 build: $(OBJS)
+
+rebuild: clean all
 
 clean:
 	rm -f $(OBJS) $(OUT)
