@@ -13,6 +13,19 @@ PROGNAME	= a.out
 BUILD_DIR	= ../build/43/
 
 SOURCE	= \
+main.cpp \
+strings/destroy.cpp \
+strings/add.cpp \
+strings/count.cpp \
+strings/enlarge.cpp \
+strings/fill.cpp \
+strings/release.cpp \
+strings/safeat.cpp \
+strings/strings1.cpp \
+strings/strings2.cpp \
+strings/strings3.cpp \
+strings/strings4.cpp \
+strings/swap.cpp
 
 OUT	= $(BUILD_DIR)$(PROGNAME)
 OBJS	= $(SOURCE:%.cpp=$(BUILD_DIR)%.o)
@@ -27,6 +40,8 @@ $(BUILD_DIR)%.o : %.cpp
 	$(CXX) $(CXXFLAGS) $< -o $@
 
 build: $(OBJS)
+
+rebuild: clean all
 
 clean:
 	rm -f $(OBJS) $(OUT)
