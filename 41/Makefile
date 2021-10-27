@@ -8,11 +8,27 @@ endif
 
 CXX	 = g++
 CXXFLAGS	 =  -c -Wall -Werror -std=c++20
-PROGNAME	= a.out
+PROGNAME	= charCounter
 
 BUILD_DIR	= ../build/41/
 
 SOURCE	= \
+main.cpp \
+showchar.cpp \
+charcount/action.cpp \
+charcount/charcount1.cpp \
+charcount/charcount2.cpp \
+charcount/append.cpp \
+charcount/capacity.cpp \
+charcount/processchar.cpp \
+charcount/inc.cpp \
+charcount/count.cpp \
+charcount/insert.cpp \
+charcount/info.cpp \
+charcount/locate.cpp \
+charcount/moveelements.cpp \
+charcount/enlarge.cpp \
+charcount/rawcapacity.cpp
 
 OUT	= $(BUILD_DIR)$(PROGNAME)
 OBJS	= $(SOURCE:%.cpp=$(BUILD_DIR)%.o)
@@ -27,6 +43,8 @@ $(BUILD_DIR)%.o : %.cpp
 	$(CXX) $(CXXFLAGS) $< -o $@
 
 build: $(OBJS)
+
+rebuild: clean all
 
 clean:
 	rm -f $(OBJS) $(OUT)

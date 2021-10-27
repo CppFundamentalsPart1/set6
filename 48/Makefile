@@ -6,13 +6,13 @@ ifeq (run,$(firstword $(MAKECMDGOALS)))
   $(eval $(RUN_ARGS):;@:)
 endif
 
-CXX	 = g++
-CXXFLAGS	 =  -c -Wall -Werror -std=c++20
-PROGNAME	= a.out
+CXX = g++
+CXXFLAGS =  -c -Wall -Werror -std=c++20
+PROGNAME = a.out
 
-BUILD_DIR	= ../build/48/
+BUILD_DIR = ../build/48/
 
-SOURCE	= \
+SOURCE = \
 main.cpp \
 calculator/memberptrs.cpp \
 tokenizer/tokenizer1.cpp \
@@ -66,8 +66,8 @@ calculator/toDouble.cpp \
 ../47/value/charvalue.cpp \
 ../47/value/requirespecial.cpp
 
-OUT	= $(BUILD_DIR)$(PROGNAME)
-OBJS	= $(SOURCE:%.cpp=$(BUILD_DIR)%.o)
+OUT = $(BUILD_DIR)$(PROGNAME)
+OBJS = $(SOURCE:%.cpp=$(BUILD_DIR)%.o)
 
 all: $(OUT)
 

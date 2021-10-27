@@ -1,0 +1,10 @@
+#include "charcount/charcount.h"
+
+#include <cctype>
+#include <iostream>
+
+using namespace std;
+
+// show the char ch and its frequency, (unsigned char removes need for cast to
+// unsigned before cast to size_t)
+void showChar(unsigned char ch, size_t frequency);
