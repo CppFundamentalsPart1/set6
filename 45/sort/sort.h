@@ -10,9 +10,9 @@ class Sort
 
 public:
     Sort(int (*compare)(std::string const *const *lhs,
-                        std::string const *const *rhs));
+                        std::string const *const *rhs));  // sort1.cpp
 
-    void sort(std::string const **data, size_t size);
+    void sort(std::string const **data, size_t size);  // sort2.cpp
 
 private:
     static int compare(void const *lhs, void const *rhs, void *sortObj);

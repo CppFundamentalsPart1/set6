@@ -1,0 +1,11 @@
+explain.txt
+
+sort/sort.h
+sort/sort.ih
+sort/sort1.cpp
+sort/sort2.cpp
+sort/compare.cpp
+
+main.ih
+increasing.cpp
+nocasedec.cpp
