@@ -1,0 +1,1 @@
+What are the variants of new/delete? For each of the variants provide a (short!) example in which the used new/delete is appropriate and provide a short explanation why it is appropriately used.
