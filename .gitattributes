@@ -4,3 +4,7 @@ Makefile export-ignore
 makefile export-ignore
 
 # add files you want uploaded to git but that are not to be submitted in the zip
+43/main.cpp export-ignore
+44/main.cpp export-ignore
+45/main.cpp export-ignore
+46/main.cpp export-ignore
