@@ -31,8 +31,8 @@ struct CharCount
         static void (CharCount::*s_action[])(char ch, size_t idx);
 
     public:
-        CharCount();
-        ~CharCount();
+        CharCount();  // charcount1.cpp
+        ~CharCount();  // charcount2.cpp
         // count number of characters read from in, return total number of
         // characters found
         size_t count(std::istream &in);
@@ -57,11 +57,13 @@ struct CharCount
         // increment the character in d_info.ptr at idx
         void inc(char, size_t idx);
 
-        // move the elements d_info.ptr[start] to d_info.ptr[end] into dest
+        // move the elements from d_ptr starting at start one to the right
         void moveElements(size_t start);
 
+        // double the capacity
         void enlarge();
 
+        // return a pointer to raw memory able to hold d_capacity Char's
         Char *rawCapacity() const;
 
 };

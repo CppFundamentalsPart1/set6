@@ -2,5 +2,5 @@
 
 CharCount::~CharCount()
 {
-    operator delete(d_info.ptr);
+    operator delete(d_info.ptr);  // free the allocated memory
 }
