@@ -1,0 +1,1 @@
+Implement the Strings class from the previous exercise using double pointers and a doubling rule.

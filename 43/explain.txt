@@ -1,0 +1,1 @@
+The class Strings contains a serious defect. Modify the function such that this is fixed.

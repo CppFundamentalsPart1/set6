@@ -17,11 +17,11 @@ class Strings
             std::string **str;
         };
 
-        Strings();
-        Strings(int argc, char *argv[]);
-        Strings(char *environLike[]);
-        Strings(std::istream &in);
-        ~Strings();
+        Strings();                        // strings1.cpp
+        Strings(int argc, char *argv[]);  // strings2.cpp
+        Strings(char *environLike[]);     // strings3.cpp
+        Strings(std::istream &in);        // strings4.cpp
+        ~Strings();                       // strings5.cpp
 
         void swap(Strings &other);
 

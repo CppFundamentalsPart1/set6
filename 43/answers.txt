@@ -1,3 +1,7 @@
+What is the serious defect?
+
+    The memory allocated to hold the strings is never freed, leading to memory leaking. This can be solved by defining a destructor and freeing the allocated memory there.
+
 In String's interface two at members are declared.
     1. Why?
 

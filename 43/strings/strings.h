@@ -16,10 +16,10 @@ class Strings
         };
 
         Strings() = default;
-        Strings(int argc, char *argv[]);
-        Strings(char *environLike[]);
-        Strings(std::istream &in);
-        ~Strings();
+        Strings(int argc, char *argv[]);  // strings1.cpp
+        Strings(char *environLike[]);     // strings2.cpp
+        Strings(std::istream &in);        // strings3.cpp
+        ~Strings();                       // strings4.cpp
 
         void swap(Strings &other);
 

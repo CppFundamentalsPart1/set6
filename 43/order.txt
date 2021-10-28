@@ -1,0 +1,9 @@
+explain.txt
+
+strings/strings.h
+strings/strings2.cpp
+strings/strings3.cpp
+strings/strings4.cpp
+strings/destroy.cpp
+
+answers.txt
