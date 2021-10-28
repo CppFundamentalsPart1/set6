@@ -1,0 +1,19 @@
+In String's interface two at members are declared.
+    1. Why?
+
+        Because a member for const objects is needed too.
+
+    2. Which one is used in the abovementioned main function?
+
+        Since strings is not const
+
+            std::string &at(size_t idx);
+
+        is used.
+
+    3. Provide a small (!) example showing a situation where the other at member is used.
+
+        void foo(Strings const &strings)
+        {
+            cout << strings.at(0) << '\n';
+        }
