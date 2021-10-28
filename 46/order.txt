@@ -1,0 +1,9 @@
+explain.txt
+
+strings/strings.h
+strings/swap.cpp
+strings/reserve.cpp
+strings/fill.cpp
+strings/safeat.cpp
+strings/destroy.cpp
+strings/rawpointer.cpp

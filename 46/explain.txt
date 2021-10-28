@@ -1,0 +1,3 @@
+Implement the class Strings using placement new.
+
+(Note: since we already implemented Strings using placement new in the exercise with double pointers (exercise 44) the changes between this exercise and exercise 44 are not huge, only the files changed between these two exercises have been submitted here.)

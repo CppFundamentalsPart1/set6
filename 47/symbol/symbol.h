@@ -9,29 +9,29 @@ class Symbol
     std::string d_ident;
     Value d_value;
 
-public:
-    enum Order
-    {
-        LHS_FIRST,
-        EQUAL,
-        RHS_FIRST
-    };
+    public:
+        enum Order
+        {
+            LHS_FIRST,
+            EQUAL,
+            RHS_FIRST
+        };
 
-    Symbol(std::string const &ident, double value);
-    Symbol(std::string const &ident, int value);
+        Symbol(std::string const &ident, double value);  // symbol1.cpp
+        Symbol(std::string const &ident, int value);     // symbol2.cpp
 
-    std::string const &ident() const;
+        std::string const &ident() const;
 
-    double doubleValue() const;
-    int intValue() const;
-    char charValue() const;
-    Token token() const;
+        double doubleValue() const;
+        int intValue() const;
+        char charValue() const;
+        Token token() const;
 
-    Value const &value() const;
+        Value const &value() const;
 
-    Order compare(std::string const &arg) const;
+        Order compare(std::string const &arg) const;
 
-    void assign(Value const &value);
+        void assign(Value const &value);
 
 };
 

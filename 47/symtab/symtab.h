@@ -10,24 +10,25 @@ class Symtab
 
     Symbol **d_symbols;
 
-public:
-    Symtab();
-    ~Symtab();
+    public:
+        Symtab();   // symtab1.cpp
+        ~Symtab();  // symtab2.cpp
 
-    Symbol &find(std::string const &ident);
-    size_t findIdx(std::string const &ident);
+        Symbol &find(std::string const &ident);
+        size_t findIdx(std::string const &ident);
 
-    size_t size() const;
+        size_t size() const;
 
-    Symbol &at(size_t idx);
-    Symbol const &at(size_t idx) const;
+        Symbol &at(size_t idx);
+        Symbol const &at(size_t idx) const;
 
-private:
-    size_t binSearch(std::string const &ident) const;
+    private:
+        size_t binSearch(std::string const &ident) const;
 
-    void enlarge();
+        void enlarge();
 
-    static void moveElements(Symbol **dest, Symbol **start);
+        // move elements [start, dest) one to the right
+        static void moveElements(Symbol **dest, Symbol **start);
 };
 
 inline Symbol &Symtab::find(std::string const &ident)

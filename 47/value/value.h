@@ -16,22 +16,22 @@ class Value
         char u_char;
     };
 
-public:
-    Value(int value = 0);
-    Value(double value);
-    Value(size_t idx, Token);
+    public:
+        Value(int value = 0);      // value1.cpp
+        Value(double value);       // value2.cpp
+        Value(size_t idx, Token);  // value3.cpp
 
-    double doubleValue() const;
-    int intValue() const;
-    char charValue() const;
+        double doubleValue() const;
+        int intValue() const;
+        char charValue() const;
 
-    Token token() const;
+        Token token() const;
 
-    void doubleValue(double value);
-    void intValue(int value);
-    void charValue(char value);
+        void doubleValue(double value);
+        void intValue(int value);
+        void charValue(char value);
 
-    void requireSpecial(Token token);
+        void requireSpecial(Token token);
 };
 
 #include "doublevalue.f"

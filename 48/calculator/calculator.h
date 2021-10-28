@@ -18,58 +18,58 @@ class Calculator
     static bool (Calculator::*s_factor[])(Value &ret);  // functions (cf.
     static Value (Calculator::*s_unit[])();             // data.cc)
 
-public:
-    void run();
+    public:
+        void run();
 
-private:
-    void prompt();  // show the initial prompt
-    bool atEoln();
+    private:
+        void prompt();  // show the initial prompt
+        bool atEoln();
 
-    bool ok();  // true: expr. correctly completed
+        bool ok();  // true: expr. correctly completed
 
-    Value evaluate();
-    Value expr();
-    Value term();
-    Value factor();
+        Value evaluate();
+        Value expr();
+        Value term();
+        Value factor();
 
-    bool add(Value &lhs);  // with s_term, in expr()
-    bool sub(Value &lhs);
+        bool add(Value &lhs);  // with s_term, in expr()
+        bool sub(Value &lhs);
 
-    bool mul(Value &lhs);  // with s_factor, in term()
-    bool div(Value &lhs);
-    bool mod(Value &lhs);
+        bool mul(Value &lhs);  // with s_factor, in term()
+        bool div(Value &lhs);
+        bool mod(Value &lhs);
 
-    bool divisionOK(bool zeroRhs);  // true: no division by 0
+        bool divisionOK(bool zeroRhs);  // true: no division by 0
 
-    bool done(Value &ret);
+        bool done(Value &ret);
 
-    Value notOK();  // with s_unit, in factor()
-    Value charUnit();
-    Value intDouble();
-    Value ident();
+        Value notOK();  // with s_unit, in factor()
+        Value charUnit();
+        Value intDouble();
+        Value ident();
 
-    Value parenthesized();  // handle parenthesized expressions
-    Value unaryMinus();     // handle unary minues
+        Value parenthesized();  // handle parenthesized expressions
+        Value unaryMinus();     // handle unary minues
 
-    Token show(Value const &value);
+        Token show(Value const &value);
 
-    bool charToken(int ch);  // true if 'ch' is the next token
-    size_t charTokens(std::string const &chars);  // the index of the
-                                                  // token in chars, or
-                                                  // chars.length()
+        bool charToken(int ch);  // true if 'ch' is the next token
+        size_t charTokens(std::string const &chars);  // the index of the
+                                                      // token in chars, or
+                                                      // chars.length()
 
-    Value rvalue(Value const &value) const;  // value or its symbol's val.
+        Value rvalue(Value const &value) const;  // value or its symbol's val.
 
-    void assign(Value &lhs, Value const &rhs);  // lhs = rhs
+        void assign(Value &lhs, Value const &rhs);  // lhs = rhs
 
-    void nextToken();  // if d_ok get the next token
+        void nextToken();  // if d_ok get the next token
 
-    static Token equalize(Value &lhs, Value &rhs);  // equalizes lhs/rhs
+        static Token equalize(Value &lhs, Value &rhs);  // equalizes lhs/rhs
                                                     // (Token) values: to
                                                     // DOUBLE unless both are
                                                     // INT
 
-    static void toDouble(Value &rvalue);  // converts INT to DOUBLE
+        static void toDouble(Value &rvalue);  // converts INT to DOUBLE
 };
 
 #endif  // _CALCULATOR_H_

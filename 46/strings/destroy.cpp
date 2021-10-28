@@ -3,7 +3,7 @@
 void Strings::destroy()
 {
     for (string *end = d_str + d_size; end-- != d_str;)
-        end->~basic_string();
+        end->~string();  // call destructor for each string
 
     operator delete(d_str);
 }

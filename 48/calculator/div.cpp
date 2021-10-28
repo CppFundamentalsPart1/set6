@@ -5,15 +5,15 @@ bool Calculator::div(Value &lhs)
     lhs = rvalue(lhs);
     Value rhs = rvalue(factor());
 
-    bool zeroRhs = false;
+    bool rhsZero = false;
 
     if (equalize(lhs, rhs) == INT)
     {
-        if (!(zeroRhs = rhs.intValue() == 0))
+        if (!(rhsZero = rhs.intValue() == 0))
             lhs.intValue(lhs.intValue() / rhs.intValue());
     }
-    else if (!(zeroRhs = abs(rhs.doubleValue()) < s_zeroDouble))
+    else if (!(rhsZero = abs(rhs.doubleValue()) < s_zeroDouble))
         lhs.doubleValue(lhs.doubleValue() / rhs.doubleValue());
 
-    return divisionOK(zeroRhs);
+    return divisionOK(rhsZero);
 }

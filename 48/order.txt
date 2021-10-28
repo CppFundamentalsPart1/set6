@@ -2,6 +2,7 @@ explain.txt
 
 calculator/calculator.h
 calculator/calculator.ih
+calculator/memberptrs.cpp
 calculator/run.cpp
 calculator/prompt.cpp
 calculator/atEoln.cpp

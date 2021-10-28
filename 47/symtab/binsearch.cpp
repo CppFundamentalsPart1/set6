@@ -7,18 +7,18 @@ size_t Symtab::binSearch(string const &ident) const
 
     while (begin != end)
     {
-        size_t mid = (begin + end) / 2;
+        size_t mid = (begin + end) / 2;  // midpoint
 
         switch (d_symbols[mid]->compare(ident))
         {
             case Symbol::LHS_FIRST:
-                begin = mid + 1;
+                begin = mid + 1;  // search right half
             break;
             case Symbol::RHS_FIRST:
-                end = mid;
+                end = mid;  // seach left half
             break;
             case Symbol::EQUAL:
-            return mid;
+            return mid;  // element found
         }
     }
 

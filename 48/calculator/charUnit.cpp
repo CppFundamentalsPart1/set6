@@ -5,26 +5,17 @@ Value Calculator::charUnit()
     char ch = d_tokenizer.charValue();
     nextToken();
 
-    Value ret;
-
     switch (ch)
     {
         case '(':
-            ret = parenthesized();
-            break;
-
+        return parenthesized();
         case '+':
-            ret = rvalue(factor());
-            break;
-
+        return rvalue(factor());
         case '-':
-            ret = unaryMinus();
-            break;
-
+        return unaryMinus();
         default:
             d_ok = false;
-            break;
+        return Value();
+        break;
     }
-
-    return ret;
 }
