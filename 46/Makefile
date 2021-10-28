@@ -13,11 +13,31 @@ PROGNAME	= a.out
 BUILD_DIR	= ../build/46/
 
 SOURCE	= \
+main.cpp \
+strings/destroy.cpp \
+strings/add.cpp \
+strings/count.cpp \
+strings/fill.cpp \
+strings/release.cpp \
+strings/safeat.cpp \
+strings/strings1.cpp \
+strings/strings2.cpp \
+strings/strings3.cpp \
+strings/strings4.cpp \
+strings/swap.cpp \
+strings/capacity.cpp \
+strings/rawpointer.cpp \
+strings/reserve.cpp \
+strings/resize.cpp \
+strings/strings5.cpp
 
 OUT	= $(BUILD_DIR)$(PROGNAME)
 OBJS	= $(SOURCE:%.cpp=$(BUILD_DIR)%.o)
 
 all: $(OUT)
+
+debug: CXXFLAGS += -g -Og
+debug: all
 
 $(OUT): $(OBJS)
 	$(CXX) $(OBJS) -o $(OUT)

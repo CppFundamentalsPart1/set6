@@ -1,0 +1,7 @@
+#include "strings.ih"
+
+Strings::Strings()
+:
+    d_str(rawPointer(d_capacity))
+{
+}

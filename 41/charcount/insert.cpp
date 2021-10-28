@@ -6,7 +6,7 @@ void CharCount::insert(char ch, size_t destIdx)
         enlarge();
 
     moveElements(destIdx);  // move all elements before the new element one to
-                            // the righ
+                            // the right
     new(&d_info.ptr[destIdx]) Char{ ch, 1 };
     //d_info.ptr[destIdx] = Char{ ch, 1 };  // insert the new element
 
