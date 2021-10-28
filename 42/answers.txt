@@ -1,0 +1,46 @@
+1. new/delete expression for pointer:
+
+        string *str = new string("init");
+        delete str;
+    Allocates and initializes a string and returns its address.
+    Used in cases where we want to move pointers to instead of references or values around.
+
+2. new/delete expression for array:
+
+        string *str = new string[count];
+        delete[] str;
+
+    Allocates and initializes an array of count strings and returns the address to the first element.
+    Used in cases where we want to allocate arrays with sizes unknown at compile time;
+
+3. placement new:
+
+        string *str = new (address) string("init");
+
+    No associated delete operator, instead the destructor must be called for each object initialized using placement new:
+
+        str->~string();
+
+    Initializes a string at the specified address and returns its address.
+    Used to initialize an object at the specified address when that memory has been reserved beforehand.
+
+4. placement new for arrays:
+
+        string *str = new (address) string[count];
+
+    no associated delete operator, instead the destructor must be called for each object initialized using placement new:
+
+        for (string *end = d_str + d_size; end-- != d_str;)
+            end->~string();
+
+    Initializes count strings starting at the specified address and returns the address to the first element.
+    Used to initialize count objects starting at the specified address when that memory has been reserved beforehand.
+
+5. operator new/delete:
+
+        void *ptr = operator new(count);
+        operator delete(ptr);
+
+    Allocates count bytes of raw memory that can be cast to a pointer of the desired type.
+    Used in conjunction with placement new to initialize objects in the allocated memory.
+
