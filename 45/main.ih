@@ -1,0 +1,9 @@
+#include "sort/sort.h"
+
+#include <iostream>
+#include <string>
+#include <cstring>
+using namespace std;
+
+int increasing(string const *const *lhs, string const *const *rhs);
+int nocasedec(string const *const *lhs, string const *const *rhs);

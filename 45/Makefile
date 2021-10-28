@@ -13,6 +13,12 @@ PROGNAME	= a.out
 BUILD_DIR	= ../build/45/
 
 SOURCE	= \
+main.cpp \
+increasing.cpp \
+nocasedec.cpp \
+sort/sort1.cpp \
+sort/sort2.cpp \
+sort/compare.cpp
 
 OUT	= $(BUILD_DIR)$(PROGNAME)
 OBJS	= $(SOURCE:%.cpp=$(BUILD_DIR)%.o)
