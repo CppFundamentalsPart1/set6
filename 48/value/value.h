@@ -34,9 +34,9 @@ class Value
         void requireSpecial(Token token);
 };
 
-#include "doublevalue.f"
-#include "intvalue.f"
-#include "charvalue.f"
-#include "token.f"
+// #include "doublevalue.f" commented out for mail handler
+// #include "intvalue.f"
+// #include "charvalue.f"
+// #include "token.f"
 
 #endif  // INCLUDED_VALUE_H_

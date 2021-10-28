@@ -35,12 +35,12 @@ class Symbol
 
 };
 
-#include "ident.f"
-#include "doublevalue.f"
-#include "intvalue.f"
-#include "charvalue.f"
-#include "token.f"
-#include "value.f"
-#include "assign.f"
+//#include "ident.f" commented out for mail handler
+//#include "doublevalue.f"
+//#include "intvalue.f"
+//#include "charvalue.f"
+//#include "token.f"
+//#include "value.f"
+//#include "assign.f"
 
 #endif  // _SYMBOL_H_
