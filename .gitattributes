@@ -8,3 +8,7 @@ makefile export-ignore
 44/main.cpp export-ignore
 45/main.cpp export-ignore
 46/main.cpp export-ignore
+48/value/*.f export-ignore
+48/symbol/*.f export-ignore
+48/tokenizer/*.ih export-ignore
+48/tokenizer/*.cpp export-ignore
